@@ -8,5 +8,15 @@
   </head>
   <body>
     <h1 class="text-2xl text-teal-300">hello world</h1>
+    <section>
+      <% messages.forEach((message)=> { %>
+        <article>
+            <h1><%= message.user %></h1>
+            <p><%= message.text %></p>
+            <p><%= message.added %></p>
+        </article>
+      
+      <%})%>
+    </section>
   </body>
 </html>
