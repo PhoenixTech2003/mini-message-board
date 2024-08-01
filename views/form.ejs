@@ -8,11 +8,11 @@
 </head>
 <body class="grid justify-items-center">
     <h1 class="text-2xl font-extrabold">Add New Message To The Message Board</h1>
-    <form class="grid gap-2 mt-4" method="POST" action="">
+    <form class="grid gap-2 mt-4" method="POST" action="/new">
         <label for="author">Author</label>
-        <input class="border-2 border-black rounded-md" id="author" type="text">
+        <input class="border-2 border-black rounded-md" name="author" id="author" type="text">
         <label for="message">Message</label>
-        <textarea class="border-2 border-black rounded-md" rows="5" id="message"></textarea>
+        <textarea class="border-2 border-black rounded-md" rows="5" name="message" id="message"></textarea>
         <button class="bg-blue-500 text-white px-4 py-1 font-bold rounded-md">POST</button>
     </form>
 </body>
