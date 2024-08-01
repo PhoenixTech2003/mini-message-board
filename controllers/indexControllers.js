@@ -19,4 +19,8 @@ const renderForm = function rendersTheNewMessagePage(req, res) {
   res.render("form");
 };
 
-module.exports = { renderIndexPage, renderForm };
+const addMessage = function thatAddsMessagesToTheMessageList(req, res){
+  res.send('hello from the post request')
+}
+
+module.exports = { renderIndexPage, renderForm, addMessage };
