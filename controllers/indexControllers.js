@@ -15,4 +15,4 @@ const renderIndexPage = function rendersTheIndexPage(req, res) {
   res.render("index", {messages: messages});
 };
 
-module.exports = { renderIndexPage };
+module.exports = { renderIndexPage, messages };
