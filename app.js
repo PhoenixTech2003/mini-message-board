@@ -3,7 +3,7 @@ const express = require('express')
 const indexRouter = require('./routes/indexRoute')
 const app = express()
 const assestPath = path.join(__dirname,"public")
-const PORT = 3000
+const PORT = 8080
 
 app.set('views', path.join(__dirname,"views") )
 app.set('view engine', "ejs")
