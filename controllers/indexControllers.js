@@ -28,4 +28,9 @@ const addMessage = function thatAddsMessagesToTheMessageList(req, res) {
   res.redirect("/");
 };
 
-module.exports = { renderIndexPage, renderForm, addMessage };
+const renderMessage = function rendersIndividualMessages(req, res){
+  const message = messages[req.params.messageId];
+  res.render("message", {message:message})
+}
+
+module.exports = { renderIndexPage, renderForm, addMessage, renderMessage };
