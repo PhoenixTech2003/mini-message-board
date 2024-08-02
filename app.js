@@ -1,9 +1,10 @@
 const path = require('node:path')
 const express = require('express')
 const indexRouter = require('./routes/indexRoute')
+require("dotenv").config();
 const app = express()
 const assestPath = path.join(__dirname,"public")
-const PORT = 8080
+const PORT = process.env.PORT || 9000
 
 app.set('views', path.join(__dirname,"views") )
 app.set('view engine', "ejs")
