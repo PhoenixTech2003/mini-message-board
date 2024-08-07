@@ -5,7 +5,8 @@ const {Client} = require('pg')
 const SQL = `CREATE TABLE messages (
     id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     users VARCHAR(255),
-    message VARCHAR(255)
+    message VARCHAR(255),
+    time TIMESTAMP DEFAULT NOW()
 
 );
 
