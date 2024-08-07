@@ -1,3 +1,4 @@
+const db = require("../db/queries");
 const messages = [
   {
     text: "Hi there!",
@@ -11,7 +12,9 @@ const messages = [
   },
 ];
 
-const renderIndexPage = function rendersTheIndexPage(req, res) {
+const renderIndexPage = async function rendersTheIndexPage(req, res) {
+  const result = await db.getPgVersion();
+  console.log(result);
   res.render("index", { messages: messages });
 };
 
@@ -28,9 +31,9 @@ const addMessage = function thatAddsMessagesToTheMessageList(req, res) {
   res.redirect("/");
 };
 
-const renderMessage = function rendersIndividualMessages(req, res){
+const renderMessage = function rendersIndividualMessages(req, res) {
   const message = messages[req.params.messageId];
-  res.render("message", {message:message})
-}
+  res.render("message", { message: message });
+};
 
 module.exports = { renderIndexPage, renderForm, addMessage, renderMessage };
