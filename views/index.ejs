@@ -11,10 +11,10 @@
     <section class="grid grid-cols-1  sm:grid-cols-3  gap-2 mt-4 overflow-y-scroll">
       <% messages.forEach((message, index)=> { %>
         <article  class="bg-slate-200 self-start p-4 rounded-xl grid">
-            <h1 class="text-xl font-medium"><%= message.user %></h1>
-            <p><%= message.text %></p>
-            <p class="italic font-extralight"><%= message.added %></p>
-            <a class="grid" href="/message/<%= index %>"><button class="bg-blue-500 text-white px-4 py-1 font-bold rounded-md" name="messageNumber">Open</button></a>
+            <h1 class="text-xl font-medium"><%= message.users %></h1>
+            <p><%= message.message %></p>
+            <p class="italic font-extralight"><%= message.time %></p>
+            <a class="grid" href="/message/<%= message.id %>"><button class="bg-blue-500 text-white px-4 py-1 font-bold rounded-md" name="messageNumber">Open</button></a>
             
         </article>
       
